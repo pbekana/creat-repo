@@ -1,6 +1,7 @@
 // functtttion prototyping
 #include<iostream>
 using namespace std;
+// function prottotyyping must same with functon decralation
 int add(int s, int m);
 int main()
 {
