@@ -1,19 +1,44 @@
-// functtttion prototyping
-#include<iostream>
+// some works on a functions
+/*#include<iostream>
 using namespace std;
-// function prottotyyping must same with functon decralation
-int add(int s, int m);
-int main()
+bool minu(bool c,bool d);
+// prototyping give info about function name,parameters,type the compiler
+int main ()
 {
- int a= 3,b=9,summa;
-cout<<add(a,b);
 
-    return 0;
+
+  bool w = 2,r =  9;
+  cout<< minu(w,r);
+
+
+return 0;
 }
-int add(int s,int m){
-    int x,c,sum;
-    sum = x+c;
-    cout<<"entr ttwo number";
-    cin>>x>>c;
-    return sum;
+// function definition is body of a function
+bool minu(bool c, bool d)// gives function signatures
+{
+
+bool e;
+e = c+d;
+cout<<"enter some numbrs";
+cin>>c>>d;
+cout<<e;
+return e;
+
+}*/
+// passing parameters by reference
+#include <iostream>
+using namespace std;
+void duplicate (int& a, int& b, int& c)
+{
+a*=2;
+
+b*=2;
+c*=2;
+}
+int main ()
+{
+int x=1, y=3, z=7;
+duplicate (x, y, z);
+cout << "x="<< x << ", y="<< y << ", z="<< z;
+return 0;
 }
