@@ -2,38 +2,60 @@
 using namespace std;
 #include <iostream>
 using namespace std;
-class Clock{
-    public:
-        int age;
-        float salary;
-Clock(int x,float b);
+class food{
+public:
+string fruit;
 
-Clock(){ // this is diffult consttructor
-cout<<" weeeeelvome"<<endl;
+string vegetable;
+    food(string a, string b){
+   fruit = a;
+   vegetable = b;}
+   food(food &obj){
+
+   fruit = obj.fruit;
+   vegetable = obj.vegetable;
+   cout<<vegetable<<endl<<fruit<<endl;
+
+   }
+   food(int s = 6){
+//this default constructor  gives value
+
+
+   cout<<"wellcome to jimma";}
+   //~ food();
+
+};
+class array{
+public:
+    int size ;
+    string color ;
+    void print(){
+    cout<<size<<endl<<color<<endl;
+
+    }
+/*array(int sizes , string colors){
+size = sizes;
+color = colors;
 
 }
-display(){
-cout<<age<<endl<<salary<<endl;
+*/
+array(int ses){
+size = ses;
+color = " orange";
 
-}
-Clock(Clock &obj){
-
-age = obj.age;
-salary = obj.salary;
 }
 };
-Clock::Clock(int x, float b){
-age = x;
-salary = b;
-
-
-}
 
 int main(){
-    Clock cl;
-    Clock c2(14,14.7 );
-    Clock c3 = c2;
-c3.display();
+    food s("favs","cabage");
+    food z = s;
+food x;
+array arr[3] = {(8),
+                      (2),
+                      (5)};
+for(int i = 0;i<3;i++)
+    arr[i].print();
+
 //cout<<c2.age<<endl<<c2.salary<<endl;
     return 0;
 }
